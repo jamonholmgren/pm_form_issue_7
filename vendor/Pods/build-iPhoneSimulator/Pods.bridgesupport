@@ -1,0 +1,348 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant const='true' declared_type='NSString*' name='FXFormFieldAction' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldCell' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldClass' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldDefaultValue' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldFooter' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldHeader' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldInline' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldKey' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldOptions' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldPlaceholder' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldSegue' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldSortable' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTemplate' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTitle' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldType' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeBitfield' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeBoolean' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeDate' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeDateTime' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeDefault' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeEmail' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeFloat' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeImage' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeInteger' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeLabel' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeLongText' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeNumber' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeOption' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypePassword' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypePhone' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeText' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeTime' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeURL' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldTypeUnsigned' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldValueTransformer' type='@'/>
+<constant const='true' declared_type='NSString*' name='FXFormFieldViewController' type='@'/>
+<class name='FXFormBaseCell'>
+<method selector='didSelectWithTableView:controller:'>
+<arg declared_type='UITableView*' index='0' name='tableView' type='@'/>
+<arg declared_type='UIViewController*' index='1' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setUp'>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='update'>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='FXFormController'>
+<method selector='cellClassForField:'>
+<arg declared_type='FXFormField*' index='0' name='field' type='@'/>
+<retval declared_type='Class' type='#'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='enumerateFieldsWithBlock:'>
+<arg declared_type='void (^)(FXFormField *, NSIndexPath *)' function_pointer='true' index='0' name='block' type='@?'>
+<arg declared_type='FXFormField*' type='@'/>
+<arg declared_type='NSIndexPath*' type='@'/>
+<retval declared_type='void' type='v'/>
+</arg>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='fieldForIndexPath:'>
+<arg declared_type='NSIndexPath*' index='0' name='indexPath' type='@'/>
+<retval declared_type='FXFormField*' type='@'/>
+</method>
+<method selector='form'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='indexPathForField:'>
+<arg declared_type='FXFormField*' index='0' name='field' type='@'/>
+<retval declared_type='NSIndexPath*' type='@'/>
+</method>
+<method selector='numberOfFieldsInSection:'>
+<arg declared_type='NSUInteger' index='0' name='section' type='I' type64='Q'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='numberOfSections'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='parentFormController'>
+<retval declared_type='FXFormController*' type='@'/>
+</method>
+<method selector='registerCellClass:forFieldClass:'>
+<arg declared_type='Class' index='0' name='cellClass' type='#'/>
+<arg declared_type='Class' index='1' name='fieldClass' type='#'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='registerCellClass:forFieldType:'>
+<arg declared_type='Class' index='0' name='cellClass' type='#'/>
+<arg declared_type='NSString*' index='1' name='fieldType' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='registerDefaultFieldCellClass:'>
+<arg declared_type='Class' index='0' name='cellClass' type='#'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='registerDefaultViewControllerClass:'>
+<arg declared_type='Class' index='0' name='controllerClass' type='#'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='registerViewControllerClass:forFieldClass:'>
+<arg declared_type='Class' index='0' name='controllerClass' type='#'/>
+<arg declared_type='Class' index='1' name='fieldClass' type='#'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='registerViewControllerClass:forFieldType:'>
+<arg declared_type='Class' index='0' name='controllerClass' type='#'/>
+<arg declared_type='NSString*' index='1' name='fieldType' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg declared_type='id' index='0' name='delegate' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setForm:'>
+<arg declared_type='id' index='0' name='form' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setParentFormController:'>
+<arg declared_type='FXFormController*' index='0' name='parentFormController' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTableView:'>
+<arg declared_type='UITableView*' index='0' name='tableView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='tableView'>
+<retval declared_type='UITableView*' type='@'/>
+</method>
+<method selector='viewControllerClassForField:'>
+<arg declared_type='FXFormField*' index='0' name='field' type='@'/>
+<retval declared_type='Class' type='#'/>
+</method>
+</class>
+<class name='FXFormDatePickerCell'>
+<method selector='datePicker'>
+<retval declared_type='UIDatePicker*' type='@'/>
+</method>
+</class>
+<class name='FXFormField'>
+<method selector='action'>
+<retval declared_type='void (^)(id)' function_pointer='true' type='@?'>
+<arg declared_type='id' type='@'/>
+<retval declared_type='void' type='v'/>
+</retval>
+</method>
+<method selector='fieldTemplate'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='form'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='indexOfOption:'>
+<arg declared_type='id' index='0' name='option' type='@'/>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='isInline'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isOptionSelectedAtIndex:'>
+<arg declared_type='NSUInteger' index='0' name='index' type='I' type64='Q'/>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isSortable'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='key'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='optionAtIndex:'>
+<arg declared_type='NSUInteger' index='0' name='index' type='I' type64='Q'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='optionCount'>
+<retval declared_type='NSUInteger' type='I' type64='Q'/>
+</method>
+<method selector='optionDescriptionAtIndex:'>
+<arg declared_type='NSUInteger' index='0' name='index' type='I' type64='Q'/>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='placeholder'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='segue'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='setOptionSelected:atIndex:'>
+<arg declared_type='BOOL' index='0' name='selected' type='B'/>
+<arg declared_type='NSUInteger' index='1' name='index' type='I' type64='Q'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setValue:'>
+<arg declared_type='id' index='0' name='value' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='title'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='type'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='value'>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='valueClass'>
+<retval declared_type='Class' type='#'/>
+</method>
+<method selector='viewController'>
+<retval declared_type='id' type='@'/>
+</method>
+</class>
+<class name='FXFormImagePickerCell'>
+<method selector='imagePickerController'>
+<retval declared_type='UIImagePickerController*' type='@'/>
+</method>
+<method selector='imagePickerView'>
+<retval declared_type='UIImageView*' type='@'/>
+</method>
+</class>
+<class name='FXFormOptionPickerCell'>
+<method selector='pickerView'>
+<retval declared_type='UIPickerView*' type='@'/>
+</method>
+</class>
+<class name='FXFormOptionSegmentsCell'>
+<method selector='segmentedControl'>
+<retval declared_type='UISegmentedControl*' type='@'/>
+</method>
+</class>
+<class name='FXFormSliderCell'>
+<method selector='slider'>
+<retval declared_type='UISlider*' type='@'/>
+</method>
+</class>
+<class name='FXFormStepperCell'>
+<method selector='stepper'>
+<retval declared_type='UIStepper*' type='@'/>
+</method>
+</class>
+<class name='FXFormSwitchCell'>
+<method selector='switchControl'>
+<retval declared_type='UISwitch*' type='@'/>
+</method>
+</class>
+<class name='FXFormTextFieldCell'>
+<method selector='textField'>
+<retval declared_type='UITextField*' type='@'/>
+</method>
+</class>
+<class name='FXFormTextViewCell'>
+<method selector='textView'>
+<retval declared_type='UITextView*' type='@'/>
+</method>
+</class>
+<class name='FXFormViewController'>
+<method selector='formController'>
+<retval declared_type='FXFormController*' type='@'/>
+</method>
+<method selector='setTableView:'>
+<arg declared_type='UITableView*' index='0' name='tableView' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='tableView'>
+<retval declared_type='UITableView*' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='didSelectWithTableView:controller:'>
+<arg declared_type='UITableView*' index='0' name='tableView' type='@'/>
+<arg declared_type='UIViewController*' index='1' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='excludedFields'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='extraFields'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='field'>
+<retval declared_type='FXFormField*' type='@'/>
+</method>
+<method selector='fieldDescription'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='fields'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method class_method='true' selector='heightForField:width:'>
+<arg declared_type='FXFormField*' index='0' name='field' type='@'/>
+<arg declared_type='CGFloat' index='1' name='width' type='f' type64='d'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='setField:'>
+<arg declared_type='FXFormField*' index='0' name='field' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='FXForm'>
+<method selector='excludedFields' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='extraFields' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+<method selector='fields' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</informal_protocol>
+<informal_protocol name='FXFormFieldCell'>
+<method selector='didSelectWithTableView:controller:' type='v16@0:4@8@12' type64='v32@0:8@16@24'>
+<arg declared_type='UITableView*' index='0' name='tableView' type='@'/>
+<arg declared_type='UIViewController*' index='1' name='controller' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='field' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='FXFormField*' type='@'/>
+</method>
+<method class_method='true' selector='heightForField:width:' type='f16@0:4@8f12' type64='d32@0:8@16d24'>
+<arg declared_type='FXFormField*' index='0' name='field' type='@'/>
+<arg declared_type='CGFloat' index='1' name='width' type='f' type64='d'/>
+<retval declared_type='CGFloat' type='f' type64='d'/>
+</method>
+<method selector='setField:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='FXFormField*' index='0' name='field' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='FXFormFieldViewController'>
+<method selector='field' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='FXFormField*' type='@'/>
+</method>
+<method selector='setField:' type='v12@0:4@8' type64='v24@0:8@16'>
+<arg declared_type='FXFormField*' index='0' name='field' type='@'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='FXForms'>
+<method selector='fieldDescription' type='@8@0:4' type64='@16@0:8'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+</informal_protocol>
+</signatures>
